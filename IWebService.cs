@@ -1,7 +1,7 @@
 namespace Fetch
 {
-    public interface IWebService
+    public interface IWebService<T>
     {
-        Task<Result> FetchData(string endpoint);
+        Task<WebResult<T>> FetchData(string endpoint);
     }
 }

@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace Fetch
 {
-    public class WebService : IWebService 
+    public class WebService<T> : IWebService<T> 
     {
 
         private static readonly HttpClient client = new HttpClient();
 
-        public async Task<Result> FetchData(string endpoint)
+        public async Task<WebResult<T>> FetchData(string endpoint)
         {
             try
             {
@@ -19,14 +19,16 @@ namespace Fetch
 
                 var json = await response.Content.ReadAsStringAsync();
 
-                var result = JsonConvert.DeserializeObject<Result>(json);
+                T result = JsonConvert.DeserializeObject<T>(json);
 
-                return result;
+                var webResult = new WebResult<T>(result, true);
+
+                return webResult;
             } 
             catch(HttpRequestException ex)
             {
                 Console.WriteLine($"{ex.Message}\n");
-                return new Result();
+                return new WebResult<T>(default(T), false, ex.Message);
             }
         }
     }

@@ -189,11 +189,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/danielhjartstrom/entityframe/fetchdata/fetchdata.csproj",
+      "projectUniqueName": "/Users/danielhjartstrom/fetchdata/fetchdata.csproj",
       "projectName": "fetchdata",
-      "projectPath": "/Users/danielhjartstrom/entityframe/fetchdata/fetchdata.csproj",
+      "projectPath": "/Users/danielhjartstrom/fetchdata/fetchdata.csproj",
       "packagesPath": "/Users/danielhjartstrom/.nuget/packages/",
-      "outputPath": "/Users/danielhjartstrom/entityframe/fetchdata/obj/",
+      "outputPath": "/Users/danielhjartstrom/fetchdata/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/danielhjartstrom/.nuget/NuGet/NuGet.Config"

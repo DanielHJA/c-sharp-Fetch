@@ -8,7 +8,7 @@ namespace Fetch
         static async Task Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
-                .AddScoped<IWebService, WebService>()
+                .AddScoped(typeof(IWebService<>), typeof(WebService<>))
                 .BuildServiceProvider();
 
             await FetchData(serviceProvider);
@@ -18,9 +18,17 @@ namespace Fetch
         {
             using (var scope = serviceProvider.CreateScope())
             {
-                var webService = scope.ServiceProvider.GetRequiredService<IWebService>();
-                var result = await webService.FetchData(Constants.API.Endpoint);
-                Console.WriteLine(result.Results[0].Name.Last);
+                var webService = scope.ServiceProvider.GetRequiredService<IWebService<Result>>();
+                var task = await webService.FetchData(Constants.API.Endpoint);
+
+                if (task.Success)
+                {
+                    Console.WriteLine(task.Data.Results[0].Name.First);
+                } 
+                else 
+                {
+                    Console.WriteLine(task.Error);
+                }
             }
         }
     }

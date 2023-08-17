@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NAmWajrN/iQh5m6e3aDwESNvDjkYhlmfsEqgu4l1bLBYccSht6hO/m0eoJuwqkeZnEN4WYNJrFJzye8NQeTEsw==",
+  "dgSpecHash": "DFh3ooqW0EyAe76s6YY9QbDh8iaxPxhCbHuAFLmbL43vh7XLcpgWGrA7Y0p5gz1uyhuMUqx3k5B8QcxaKRFFeQ==",
   "success": true,
-  "projectFilePath": "/Users/danielhjartstrom/entityframe/fetchdata/fetchdata.csproj",
+  "projectFilePath": "/Users/danielhjartstrom/fetchdata/fetchdata.csproj",
   "expectedPackageFiles": [
     "/Users/danielhjartstrom/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.0/microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "/Users/danielhjartstrom/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
