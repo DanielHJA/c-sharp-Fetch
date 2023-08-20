@@ -18,7 +18,7 @@ namespace Fetch
         {
             using (var scope = serviceProvider.CreateScope())
             {
-                var webService = scope.ServiceProvider.GetRequiredService<IWebService<Result>>();
+                var webService = scope.ServiceProvider.GetRequiredService<IWebService<Result<Person>>>();
                 var task = await webService.FetchData(Constants.API.Endpoint);
 
                 if (task.Success)

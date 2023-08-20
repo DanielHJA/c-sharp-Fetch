@@ -1,7 +1,7 @@
 namespace Fetch
 {
-    public class Result
+    public class Result<T>
     {
-        public List<Person> Results = new List<Person>();
+        public List<T> Results = new List<T>();
     }
 }
